@@ -27,6 +27,10 @@ DB = "nem2p"
 def zone_apex():
     return {"Hello": "Hello API", "album_endpoint":"/albums","static_endpoint":"/static"}
 
+@app.get("/")
+def return_num():
+    return {"num": 55}
+
 @app.get("/albums")
 def get_all_albums():
     db = MySQLdb.connect(host=HOST, user=USER, passwd=PASS, db=DB)
