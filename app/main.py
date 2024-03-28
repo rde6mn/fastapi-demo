@@ -26,7 +26,7 @@ DB = "nem2p"
 
 @app.get("/")  # zone apex
 def zone_apex():
-    return {"Hello": "Hello API", "album_endpoint":"/albums","static_endpoint":"/static", "x":"/x"}
+    return {"Hello": "Hello API", "album_endpoint":"/albums","static_endpoint":"/static", "x":"/x", "endpoint2":"/endpoint"}
 
 @app.get("/")
 def return_num():
