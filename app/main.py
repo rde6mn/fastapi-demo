@@ -11,6 +11,7 @@ import os
 import MySQLdb
 from fastapi.staticfiles import StaticFiles
 
+
 app = FastAPI()
 
 app.mount("/static", StaticFiles(directory="static", html = True), name="static")
@@ -18,7 +19,7 @@ app.mount("/static", StaticFiles(directory="static", html = True), name="static"
 HOST = os.environ.get('DBHOST')
 USER = os.environ.get('DBUSER')
 PASS = os.environ.get('DBPASS')
-DB = "nem2p"
+DB = "rde6mn"
 
 
 # The URL for this API has a /docs endpoint that lets you see and test
