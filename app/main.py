@@ -20,16 +20,19 @@ USER = os.environ.get('DBUSER')
 PASS = os.environ.get('DBPASS')
 DB = "nem2p"
 
+
 # The URL for this API has a /docs endpoint that lets you see and test
 # your various endpoints/methods.
 
 @app.get("/")  # zone apex
 def zone_apex():
-    return {"Hello": "Hello API", "album_endpoint":"/albums","static_endpoint":"/static"}
+    return {"Hello": "Hello API", "album_endpoint":"/albums","static_endpoint":"/static", "x":"/x"}
 
 @app.get("/")
 def return_num():
     return {"num": 55}
+
+
 
 @app.get("/albums")
 def get_all_albums():
@@ -48,6 +51,8 @@ def get_one_album(id):
     results = c.fetchall()
     db.close()
     return results
+
+
     
 # Start using the "Item" BaseModel
 # Post / Delete / Patch methods
